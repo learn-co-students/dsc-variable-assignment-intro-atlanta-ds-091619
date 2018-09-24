@@ -1,32 +1,219 @@
-# Object Orientation
 
-## Overview
+# Introduction to Variables: Variable Assignment
 
-We'll introduce the concept of Object Oriented Programming (OOP)
+## Introduction
 
-## Object-Oriented Programming (OOP)
 
-*An object-oriented approach to application development makes programs more intuitive to design, faster to develop, more amenable to modification, and easier to understand.*  
-—[*Object-Oriented Programming with Objective-C*][apple_oop_guide_intro], Apple Inc.
+> "There are only two hard things in Computer Science: cache invalidation and naming things."
 
-[apple_oop_guide_intro]: https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40005149-CH1-SW2
+> -- Phil Karlton
 
-It's natural to wonder, "how can a string of ones and zeroes be referred to as an 'object'?" The use of the word "object" is an abstraction of thought. An "object" in code has no more physical form than does a word in any human language. Sure, words have physical representations: speaking a word causes air to vibrate in a sound wave, ink on a page can be shaped into symbols that represent the word, a meaning can be pointed at or mimed out; but none of these are the word itself. Human language is a system of abstraction: it communicates the *idea* of a thing, but not the thing itself.
+> "...But ordinary language is all right." 
 
-![](https://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg)  
-Translation: "This is not a pipe." - [*The Treachery of Images*](https://en.wikipedia.org/wiki/The_Treachery_of_Images), [René Magritte](https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte), 1927  
+> Ludwig Wittgenstein
 
-This image of a pipe is no more a pipe than the word "pipe" is a pipe; in the same way, a code object named `pipe` is not a pipe, but only another form of representing a pipe.
+## Objectives
+* Understand and explain the concept of variables
 
->As humans, we’re constantly faced with myriad facts and impressions that we must make sense of. To do so, we must abstract underlying structure away from surface details and discover the fundamental relations at work. Abstractions reveal causes and effects, expose patterns and frameworks, and separate what’s important from what’s not. Object orientation provides an abstraction of the data on which you operate; moreover, it provides a concrete grouping between the data and the operations you can perform with the data—in effect giving the data behavior.  
->—[*Object-Oriented Programming with Objective-C*](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/OOP_ObjC/Articles/ooOOP.html#//apple_ref/doc/uid/TP40005149-CH8-SW3), Apple Inc.
+### Declaring and Assigning Variables
 
-A code object representing a water pipe (instead of a smoking pipe) might contain values for `length`, `diameter`, `material`, and `manufacturer`. The bundling of these individual pieces of information together begins to form a larger whole.
+So far we have worked with data -- strings, numbers, and booleans.  In this lesson, we'll learn how to use variables to assign names to this data.  For example, the name `"art vandelay"`.
 
-Object-Oriented Programming, however, does more than just bundle up individual pieces of data that represent a "thing" — it also bundles customized functions that can be performed *on* that data. These are called **methods**: behaviors that an object performs upon its internal data and even upon other code objects.
 
-An object in code is a thing with all the data and all the logic required to complete a task. Objects are models and metaphors for the problems we solve in code.
+```python
+"art vandelay"
+```
 
-Object-oriented programming was born from the trend of making digital lives reflect our real lives. In the 1970's, [Adele Goldberg](https://en.wikipedia.org/wiki/Adele_Goldberg_%28computer_scientist%29) and [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay) developed an object-oriented language at Xerox PARC called SmallTalk, which was used in the first personal computer.
+Now months later, if we see that string in some code, we may be confused as to what it is, and with even more data, this only becomes more difficult. Think of what we saw in our **Data Types Lab**: `"art.vandelay@vandelay.co"`, `"Ceo"`, `"7285553334"`, `"vandelay.com"`. There's a lot to keep track of.
 
-Python comes with a few types of Objects to get us started, things like `int` for Integer, `str` for String, `list` for List, etc. We call these base types of Objects "Primitives." But what if we wanted to create a new type in our programming universe, a new kind of object for our code? That's what the `class` keyword and object orientation allows us to do.
+So, let's use variables to indicate what each of these strings mean.
+
+
+```python
+email = "art.vandelay@vandelay.co"
+```
+
+> **Note:** For this, and all of the subsequent code in gray boxes, you should press shift + enter to ensure that the code executes. If you do not do so with the line above for example, then when we reference `email` in the lines that follow, Jupyter will throw an error indicating that the variable is undefined. So, it is not enough to just type the correct code, we need to run shift + enter on our gray boxes to run this code.
+
+In programming terms, we say that we just declared a variable, `email`, and assigned it to the string, `"art.vandelay@vandelay.co"`.  To do so, we'll follow the procedure below:
+
+    variable = data
+
+Now that we have assigned a variable `email` to a string, we just type the word `email` to see the string again. 
+
+
+```python
+email
+```
+
+> *remember to press shift + enter on the gray box above to see the value of our variable, *`email`*.*
+
+Now let's try this with the website:
+
+
+```python
+website = "vandelay.com"
+website
+```
+
+Note that if you introduce a new variable, (declare it), but do not also assign it in the same line, Python will raise an error.
+
+
+```python
+name
+```
+
+So that error tells us that `name` is not defined.  We just fix this by declaring `name` and assigning the variable in the same line.
+
+
+```python
+name = 'Art Vandelay'
+name
+```
+
+So this is assigning and reading a variable.  And when we want to see some information again, we can easily find out.
+
+
+```python
+email
+```
+
+### Declaring variables without assignment
+
+We have seen that we can have data without assigning it to variables.  
+
+
+```python
+"Unassigned data"
+```
+
+Sometimes we wish to declare a variable without assigning it to data.  In Python, that's a little tricky to do.  As we just saw with `name`, declaring variables without assignment throws an error.  Thankfully, Python has a special type for us that represents nothing at all.
+
+
+```python
+None
+```
+
+
+```python
+type(None)
+```
+
+None is a data type in Python that represents nothing.  So, if we do not know the type of a variable and want to have the data to the variable be assigned later, we can assign that variable to `None`.
+
+
+```python
+address = None
+```
+
+Notice that `address` is now assigned, but it is assigned to `None`.
+
+
+```python
+address
+```
+
+**Note:** *when variables are assigned to `None`, pressing shift + enter on the cell block will not output anything.*
+
+### Reassigning variables
+
+Now that we have this data, we can imagine using it for some kind of instruction.  For example, say we want to write ourself a memo on how to reach out to someone we just met. Here's the message:
+
+
+```python
+"Send an email to Art Vandelay at 'art.vandelay@vandelay.com' to say how nice it was meeting yesterday."
+```
+
+If we construct this message with variables, we can write the following:
+
+
+```python
+name = "Art Vandelay"
+email = "art.vandelay@vandelay.com"
+```
+
+
+```python
+"Send an email to " + name + " at " + email +  " to say how nice it was meeting yesterday."
+```
+
+Now you meet someone else, "Liz Kaplan" with the email of "liz@ka-plan.com" and want to write a memo with the same instructions, but the only thing that varies are the name and email. This should be easy enough given the way we set up our memo above. First we need to change the variables, `name` and `email`, by setting them to our new data.
+
+
+```python
+name = 'Liz Kaplan'
+email = 'liz@ka-plan.com'
+```
+
+So as you can see, we reassign our variables by just setting `variable = 'new data'`. Presto, our variable is then updated.
+
+
+```python
+name # 'Liz Kaplan'
+```
+
+
+```python
+email # 'liz@ka-plan.com'
+```
+
+Now, if we copy and re-run our previous code, we will see it is automatically updated.
+
+
+```python
+"Send an email to " + name + " at " + email +  " to say how nice it was meeting yesterday."
+```
+
+So in the line above, we are getting to some of the real power of programming.  By choosing the correct variable name, we can begin to change the values of `name` or `email` and operate on their underlying values in the same ways.
+
+### Operating on variables
+
+Just to hammer this point home let's see what we can now do with the name variable.
+
+
+```python
+name
+```
+
+
+```python
+name.upper()
+```
+
+
+```python
+name.title()
+```
+
+Just like how we are able to directly call methods on a string, we can also call methods on a variable that points to a string.  And, if we try to call a method on something that we think is a string, but really is a number, we will see an error.
+
+
+```python
+name = 42
+```
+
+
+```python
+name.upper()
+```
+
+We receive the same error from calling `upper` directly on the number `42` as we do when we call `upper` on a variable that points to the number `42`. So, now that we are working with variables, we may run into errors where we thought a variable is one thing, but it is actually something else. Don't worry, this is no big deal.  We can just check to see what the variable is.
+
+
+```python
+name
+```
+
+Once we have see what the variable is, we can make our change.
+
+
+```python
+name = 'Liz Kaplan'
+name
+```
+
+### Summary
+
+In this lesson, we got a taste for what makes computer programs so powerful.  By using variables, we can write programs that know how to combine data.  This can save us time by avoiding boring, repetitive tasks.  We declare and assign a variable with the pattern of `variable = data`, and reassign a variable with the same pattern.  To reference a variable, we simply type the variable's name.  
+
+We also saw that one of the things to pay attention to when working with variables is that they are sometimes different from what we expect.  So we just type the name of the variable, to see what it really is and make any necessary changes. 
