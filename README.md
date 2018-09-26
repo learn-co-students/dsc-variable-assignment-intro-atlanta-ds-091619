@@ -13,20 +13,21 @@
 > Ludwig Wittgenstein
 
 ## Objectives
+You will be able to:
 * Understand and explain the concept of variables
 
 ### Declaring and Assigning Variables
 
-So far we have worked with data -- strings, numbers, and booleans.  In this lesson, we'll learn how to use variables to assign names to this data.  For example, the name `"art vandelay"`.
+In this lesson, we'll learn how to use variables to assign names to data.  For example, the name `"art vandelay"`.
 
 
 ```python
 "art vandelay"
 ```
 
-Now months later, if we see that string in some code, we may be confused as to what it is, and with even more data, this only becomes more difficult. Think of what we saw in our **Data Types Lab**: `"art.vandelay@vandelay.co"`, `"Ceo"`, `"7285553334"`, `"vandelay.com"`. There's a lot to keep track of.
+Now months later, if we see that string in some code, we may be confused as to what it is, and with even more data, this only becomes more difficult.
 
-So, let's use variables to indicate what each of these strings mean.
+So, let's use variables to indicate what each of the following strings mean.
 
 
 ```python
@@ -165,52 +166,6 @@ Now, if we copy and re-run our previous code, we will see it is automatically up
 ```
 
 So in the line above, we are getting to some of the real power of programming.  By choosing the correct variable name, we can begin to change the values of `name` or `email` and operate on their underlying values in the same ways.
-
-### Operating on variables
-
-Just to hammer this point home let's see what we can now do with the name variable.
-
-
-```python
-name
-```
-
-
-```python
-name.upper()
-```
-
-
-```python
-name.title()
-```
-
-Just like how we are able to directly call methods on a string, we can also call methods on a variable that points to a string.  And, if we try to call a method on something that we think is a string, but really is a number, we will see an error.
-
-
-```python
-name = 42
-```
-
-
-```python
-name.upper()
-```
-
-We receive the same error from calling `upper` directly on the number `42` as we do when we call `upper` on a variable that points to the number `42`. So, now that we are working with variables, we may run into errors where we thought a variable is one thing, but it is actually something else. Don't worry, this is no big deal.  We can just check to see what the variable is.
-
-
-```python
-name
-```
-
-Once we have see what the variable is, we can make our change.
-
-
-```python
-name = 'Liz Kaplan'
-name
-```
 
 ### Summary
 
