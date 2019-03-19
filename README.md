@@ -3,7 +3,6 @@
 
 ## Introduction
 
-
 > "There are only two hard things in Computer Science: cache invalidation and naming things."
 
 > -- Phil Karlton
@@ -16,7 +15,7 @@
 By the end of this notebook, you will be able to:
 * Understand and explain the concept of variables in Python
 
-### Declaring and Assigning Variables
+## Declaring and Assigning Variables
 
 In this lesson, we'll learn how to use variables to assign names to data.  For example, the name `"art vandelay"`.
 
@@ -126,7 +125,7 @@ email
 
 
 
-### Declaring variables without assignment
+## Declaring variables without assignment
 
 We have seen that we can have data without assigning it to variables.  
 
@@ -177,7 +176,7 @@ address
 
 **Note:** *when variables are assigned to `None`, pressing shift + enter on the cell block will not output anything.*
 
-### Reassigning variables
+## Reassigning variables
 
 Now that we have this data, we can imagine using it for some kind of instruction.  For example, say we want to write ourself a memo on how to reach out to someone we just met. Here's the message:
 
@@ -257,7 +256,7 @@ Now, if we copy and re-run our previous code, we will see it is automatically up
 
 In the line above, we are getting to some of the real power of programming. By choosing the correct variable name, we can begin to change the values of `full_name` or `email` and operate on their underlying values in the same ways.
 
-### Summary
+## Summary
 
 In this lesson, we got a taste for what makes computer programs so powerful.  By using variables, we can write programs that know how to combine data.  This can save us time by avoiding boring, repetitive tasks.  We declare and assign a variable with the pattern of `variable = data`, and reassign a variable with the same pattern.  To reference a variable, we simply type the variable's name.  
 
