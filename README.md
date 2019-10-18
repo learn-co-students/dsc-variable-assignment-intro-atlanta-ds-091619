@@ -9,11 +9,11 @@
 
 > "...But ordinary language is all right." 
 
-> Ludwig Wittgenstein
+> -- Ludwig Wittgenstein
 
 ## Objectives
 By the end of this notebook, you will be able to:
-* Understand and explain the concept of variables in Python
+* Assign and declare a Python variable
 
 ## Declaring and Assigning Variables
 
