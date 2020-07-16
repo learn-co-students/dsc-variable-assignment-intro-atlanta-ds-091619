@@ -12,7 +12,8 @@
 > -- Ludwig Wittgenstein
 
 ## Objectives
-By the end of this notebook, you will be able to:
+You will be able to:
+
 * Assign and declare a Python variable
 
 ## Declaring and Assigning Variables
